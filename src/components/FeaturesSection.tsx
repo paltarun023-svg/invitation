@@ -1,4 +1,4 @@
-import { Camera, Video, Palette, Layers, Zap, Globe, Shield, RefreshCw } from 'lucide-react';
+import { Camera, Video, Palette, Layers, Zap, Globe, Shield, RefreshCw, Heart } from 'lucide-react';
 
 const features = [
   {
@@ -12,6 +12,12 @@ const features = [
     title: 'Marketing Videos',
     description: 'Create scroll-stopping video ads and promotional content with AI-powered motion and effects.',
     color: 'from-fuchsia-500 to-pink-500',
+  },
+  {
+    icon: Heart,
+    title: 'Invitation Cards',
+    description: 'Design beautiful wedding, birthday, and party invitations with stunning templates and live previews.',
+    color: 'from-rose-500 to-pink-500',
   },
   {
     icon: Palette,

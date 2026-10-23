@@ -3,6 +3,7 @@ import { Sparkles, Menu, X } from 'lucide-react';
 import HeroSection from './components/HeroSection';
 import FeaturesSection from './components/FeaturesSection';
 import GeneratorSection from './components/GeneratorSection';
+import InvitationSection from './components/InvitationSection';
 import GallerySection from './components/GallerySection';
 import PricingSection from './components/PricingSection';
 import Footer from './components/Footer';
@@ -28,6 +29,7 @@ function App() {
             <div className="hidden md:flex items-center gap-8">
               <a href="#features" className="text-sm text-gray-300 hover:text-white transition-colors">Features</a>
               <a href="#create" className="text-sm text-gray-300 hover:text-white transition-colors">Create</a>
+              <a href="#invitations" className="text-sm text-gray-300 hover:text-white transition-colors">Invitations</a>
               <a href="#gallery" className="text-sm text-gray-300 hover:text-white transition-colors">Gallery</a>
               <a href="#pricing" className="text-sm text-gray-300 hover:text-white transition-colors">Pricing</a>
             </div>
@@ -56,6 +58,7 @@ function App() {
             <div className="px-4 py-4 space-y-3">
               <a href="#features" className="block text-sm text-gray-300 hover:text-white py-2">Features</a>
               <a href="#create" className="block text-sm text-gray-300 hover:text-white py-2">Create</a>
+              <a href="#invitations" className="block text-sm text-gray-300 hover:text-white py-2">Invitations</a>
               <a href="#gallery" className="block text-sm text-gray-300 hover:text-white py-2">Gallery</a>
               <a href="#pricing" className="block text-sm text-gray-300 hover:text-white py-2">Pricing</a>
               <button className="w-full mt-2 px-4 py-2 text-sm font-medium bg-gradient-to-r from-violet-600 to-fuchsia-600 rounded-lg">
@@ -71,6 +74,7 @@ function App() {
         <HeroSection />
         <FeaturesSection />
         <GeneratorSection />
+        <InvitationSection />
         <GallerySection />
         <PricingSection />
       </main>

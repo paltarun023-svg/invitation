@@ -40,6 +40,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li><a href="#" className="text-sm text-gray-400 hover:text-white transition-colors">AI Photo Generator</a></li>
               <li><a href="#" className="text-sm text-gray-400 hover:text-white transition-colors">AI Video Creator</a></li>
+              <li><a href="#invitations" className="text-sm text-gray-400 hover:text-white transition-colors">Invitation Cards</a></li>
               <li><a href="#" className="text-sm text-gray-400 hover:text-white transition-colors">Background Remover</a></li>
               <li><a href="#" className="text-sm text-gray-400 hover:text-white transition-colors">Brand Kit</a></li>
               <li><a href="#" className="text-sm text-gray-400 hover:text-white transition-colors">API Access</a></li>

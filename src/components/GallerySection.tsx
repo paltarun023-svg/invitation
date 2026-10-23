@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Heart, Download, Eye, Play, Filter } from 'lucide-react';
 
-const categories = ['All', 'Product Photos', 'Brand Videos', 'Social Media', 'Food & Beverage', 'Fashion', 'Tech'];
+const categories = ['All', 'Product Photos', 'Brand Videos', 'Invitations', 'Social Media', 'Food & Beverage', 'Fashion', 'Tech'];
 
 const galleryItems = [
   {
@@ -91,6 +91,50 @@ const galleryItems = [
     likes: 298,
     views: 1500,
     emoji: '🏠',
+  },
+  {
+    id: 9,
+    type: 'photo',
+    category: 'Invitations',
+    gradient: 'from-rose-300 via-pink-200 to-rose-400',
+    title: 'Elegant Wedding Invite',
+    business: 'Emma & James',
+    likes: 892,
+    views: 4200,
+    emoji: '💍',
+  },
+  {
+    id: 10,
+    type: 'photo',
+    category: 'Invitations',
+    gradient: 'from-amber-200 via-orange-200 to-pink-200',
+    title: 'Birthday Party Card',
+    business: 'Sarah\'s 30th',
+    likes: 567,
+    views: 2800,
+    emoji: '🎂',
+  },
+  {
+    id: 11,
+    type: 'photo',
+    category: 'Invitations',
+    gradient: 'from-purple-200 via-violet-200 to-indigo-300',
+    title: 'Royal Anniversary',
+    business: '25 Years Together',
+    likes: 445,
+    views: 2100,
+    emoji: '💝',
+  },
+  {
+    id: 12,
+    type: 'photo',
+    category: 'Invitations',
+    gradient: 'from-pink-100 via-rose-100 to-fuchsia-200',
+    title: 'Baby Shower Invite',
+    business: 'Welcome Baby',
+    likes: 334,
+    views: 1600,
+    emoji: '👶',
   },
 ];
 

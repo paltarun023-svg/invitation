@@ -13,6 +13,7 @@ const plans = [
     features: [
       '50 AI photos per month',
       '5 AI videos per month',
+      '10 invitation cards per month',
       '720p video resolution',
       'Basic style presets',
       'Standard backgrounds',
@@ -32,6 +33,7 @@ const plans = [
     features: [
       '200 AI photos per month',
       '25 AI videos per month',
+      'Unlimited invitation cards',
       '4K video resolution',
       'All style presets',
       'Custom backgrounds',
@@ -53,6 +55,7 @@ const plans = [
     features: [
       'Unlimited AI photos',
       'Unlimited AI videos',
+      'Unlimited invitation cards',
       '8K video resolution',
       'Custom AI model training',
       'Dedicated account manager',
