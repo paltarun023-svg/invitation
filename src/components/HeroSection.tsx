@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import { Sparkles, ArrowRight, Play, Star } from 'lucide-react';
 
 export default function HeroSection() {
@@ -7,7 +6,7 @@ export default function HeroSection() {
       {/* Background Effects */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-violet-600/20 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-fuchsia-600/20 rounded-full blur-3xl animate-pulse delay-1000" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-fuchsia-600/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-600/10 rounded-full blur-3xl" />
       </div>
 
@@ -15,25 +14,16 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:64px_64px]" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
+        <div className="animate-fade-in-up">
           {/* Badge */}
-          <motion.div 
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-8"
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2 }}
-          >
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
             <Sparkles className="w-4 h-4 text-violet-400" />
             <span className="text-sm text-gray-300">Powered by Latest AI Models</span>
             <span className="px-2 py-0.5 text-xs font-medium bg-violet-500/20 text-violet-300 rounded-full">NEW</span>
-          </motion.div>
+          </div>
 
           {/* Heading */}
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight mb-6">
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight mb-6 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
             <span className="text-white">Create Stunning</span>
             <br />
             <span className="bg-gradient-to-r from-violet-400 via-fuchsia-400 to-pink-400 bg-clip-text text-transparent">
@@ -44,34 +34,30 @@ export default function HeroSection() {
           </h1>
 
           {/* Subtitle */}
-          <p className="max-w-2xl mx-auto text-lg sm:text-xl text-gray-400 mb-10 leading-relaxed">
+          <p className="max-w-2xl mx-auto text-lg sm:text-xl text-gray-400 mb-10 leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
             Transform your brand with AI-generated product photos, marketing videos, 
             and social media content. No studio needed — just your imagination.
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-            <motion.a
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
+            <a
               href="#create"
-              className="group flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-violet-600 to-fuchsia-600 rounded-xl font-semibold text-white shadow-2xl shadow-violet-500/30 hover:shadow-violet-500/50 transition-all hover:scale-105"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              className="group flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-violet-600 to-fuchsia-600 rounded-xl font-semibold text-white shadow-2xl shadow-violet-500/30 hover:shadow-violet-500/50 transition-all hover:scale-105 active:scale-95"
             >
               Start Creating Free
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </motion.a>
-            <motion.button
-              className="flex items-center gap-2 px-8 py-4 bg-white/5 border border-white/10 rounded-xl font-semibold text-white hover:bg-white/10 transition-all"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+            </a>
+            <button
+              className="flex items-center gap-2 px-8 py-4 bg-white/5 border border-white/10 rounded-xl font-semibold text-white hover:bg-white/10 transition-all hover:scale-105 active:scale-95"
             >
               <Play className="w-5 h-5 text-violet-400" />
               Watch Demo
-            </motion.button>
+            </button>
           </div>
 
           {/* Stats */}
-          <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-16">
+          <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-16 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
             <div className="text-center">
               <div className="text-3xl font-bold text-white">50K+</div>
               <div className="text-sm text-gray-400">Businesses</div>
@@ -90,15 +76,10 @@ export default function HeroSection() {
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Floating Preview Cards */}
-        <motion.div
-          className="relative mt-20 max-w-4xl mx-auto"
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5, duration: 0.8 }}
-        >
+        <div className="relative mt-20 max-w-4xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
           <div className="relative rounded-2xl overflow-hidden border border-white/10 bg-gradient-to-b from-white/5 to-transparent p-1">
             <div className="rounded-xl overflow-hidden bg-slate-900/80 backdrop-blur-sm">
               {/* Mock Dashboard Preview */}
@@ -115,12 +96,10 @@ export default function HeroSection() {
                     'from-fuchsia-600 to-pink-600',
                     'from-amber-500 to-orange-600',
                   ].map((gradient, i) => (
-                    <motion.div
+                    <div
                       key={i}
-                      className={`aspect-video rounded-lg bg-gradient-to-br ${gradient} flex items-center justify-center`}
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{ delay: 0.8 + i * 0.2 }}
+                      className={`aspect-video rounded-lg bg-gradient-to-br ${gradient} flex items-center justify-center animate-fade-in-scale`}
+                      style={{ animationDelay: `${1 + i * 0.2}s` }}
                     >
                       <div className="text-center">
                         <div className="w-8 h-8 mx-auto mb-2 rounded-full bg-white/20 flex items-center justify-center">
@@ -130,7 +109,7 @@ export default function HeroSection() {
                           {['Product Shot', 'Brand Video', 'Social Post'][i]}
                         </div>
                       </div>
-                    </motion.div>
+                    </div>
                   ))}
                 </div>
                 <div className="mt-4 flex gap-3">
@@ -140,7 +119,7 @@ export default function HeroSection() {
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

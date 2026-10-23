@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { motion } from 'framer-motion';
 import { Heart, Download, Eye, Play, Filter } from 'lucide-react';
 
 const categories = ['All', 'Product Photos', 'Brand Videos', 'Social Media', 'Food & Beverage', 'Fashion', 'Tech'];
@@ -107,12 +106,7 @@ export default function GallerySection() {
     <section id="gallery" className="relative py-24 sm:py-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <motion.div
-          className="text-center mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-        >
+        <div className="text-center mb-12">
           <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 text-sm mb-4">
             <Eye className="w-3.5 h-3.5" />
             Community Gallery
@@ -124,7 +118,7 @@ export default function GallerySection() {
           <p className="max-w-2xl mx-auto text-lg text-gray-400">
             Browse AI-generated content from businesses like yours. Get inspired and start creating.
           </p>
-        </motion.div>
+        </div>
 
         {/* Category Filter */}
         <div className="flex items-center gap-2 overflow-x-auto pb-4 mb-8 scrollbar-hide">
@@ -147,13 +141,9 @@ export default function GallerySection() {
         {/* Gallery Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {filteredItems.map((item, index) => (
-            <motion.div
+            <div
               key={item.id}
               className="group relative aspect-[4/5] rounded-2xl overflow-hidden cursor-pointer"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.05 }}
               onMouseEnter={() => setHoveredId(item.id)}
               onMouseLeave={() => setHoveredId(null)}
             >
@@ -198,7 +188,7 @@ export default function GallerySection() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 

@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import { Check, Zap, Crown, Building2 } from 'lucide-react';
 
 const plans = [
@@ -71,12 +70,7 @@ export default function PricingSection() {
     <section id="pricing" className="relative py-24 sm:py-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-        >
+        <div className="text-center mb-16">
           <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-300 text-sm mb-4">
             <Crown className="w-3.5 h-3.5" />
             Simple Pricing
@@ -89,22 +83,18 @@ export default function PricingSection() {
           <p className="max-w-2xl mx-auto text-lg text-gray-400">
             Start free, upgrade when you're ready. All plans include commercial usage rights.
           </p>
-        </motion.div>
+        </div>
 
         {/* Pricing Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-5xl mx-auto">
           {plans.map((plan, index) => (
-            <motion.div
+            <div
               key={plan.name}
-              className={`relative rounded-2xl p-6 sm:p-8 ${
+              className={`relative rounded-2xl p-6 sm:p-8 transition-all hover:-translate-y-1 ${
                 plan.popular
                   ? 'bg-gradient-to-b from-violet-500/10 to-fuchsia-500/5 border-2 border-violet-500/30'
                   : 'bg-white/[0.03] border border-white/[0.08]'
               }`}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.15 }}
             >
               {/* Popular Badge */}
               {plan.popular && (
@@ -150,17 +140,12 @@ export default function PricingSection() {
               >
                 {plan.popular ? 'Start Free Trial' : 'Get Started'}
               </button>
-            </motion.div>
+            </div>
           ))}
         </div>
 
         {/* Bottom CTA */}
-        <motion.div
-          className="text-center mt-16"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-        >
+        <div className="text-center mt-16">
           <p className="text-gray-400 mb-4">
             Need a custom plan? <a href="#" className="text-violet-400 hover:text-violet-300 underline">Contact our sales team</a>
           </p>
@@ -178,7 +163,7 @@ export default function PricingSection() {
               14-day free trial
             </span>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

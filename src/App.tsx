@@ -1,11 +1,5 @@
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Sparkles, Camera, Video, Upload, Wand2, Image, 
-  Play, Download, Star, ChevronRight, Zap, 
-  Palette, Layers, Clock, CheckCircle, ArrowRight,
-  Menu, X, Globe, Shield, RefreshCw
-} from 'lucide-react';
+import { Sparkles, Menu, X } from 'lucide-react';
 import HeroSection from './components/HeroSection';
 import FeaturesSection from './components/FeaturesSection';
 import GeneratorSection from './components/GeneratorSection';
@@ -57,26 +51,19 @@ function App() {
         </div>
 
         {/* Mobile Menu */}
-        <AnimatePresence>
-          {mobileMenuOpen && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              className="md:hidden border-t border-white/5 bg-slate-950/95 backdrop-blur-xl"
-            >
-              <div className="px-4 py-4 space-y-3">
-                <a href="#features" className="block text-sm text-gray-300 hover:text-white py-2">Features</a>
-                <a href="#create" className="block text-sm text-gray-300 hover:text-white py-2">Create</a>
-                <a href="#gallery" className="block text-sm text-gray-300 hover:text-white py-2">Gallery</a>
-                <a href="#pricing" className="block text-sm text-gray-300 hover:text-white py-2">Pricing</a>
-                <button className="w-full mt-2 px-4 py-2 text-sm font-medium bg-gradient-to-r from-violet-600 to-fuchsia-600 rounded-lg">
-                  Get Started Free
-                </button>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
+        {mobileMenuOpen && (
+          <div className="md:hidden border-t border-white/5 bg-slate-950/95 backdrop-blur-xl animate-in slide-in-from-top duration-200">
+            <div className="px-4 py-4 space-y-3">
+              <a href="#features" className="block text-sm text-gray-300 hover:text-white py-2">Features</a>
+              <a href="#create" className="block text-sm text-gray-300 hover:text-white py-2">Create</a>
+              <a href="#gallery" className="block text-sm text-gray-300 hover:text-white py-2">Gallery</a>
+              <a href="#pricing" className="block text-sm text-gray-300 hover:text-white py-2">Pricing</a>
+              <button className="w-full mt-2 px-4 py-2 text-sm font-medium bg-gradient-to-r from-violet-600 to-fuchsia-600 rounded-lg">
+                Get Started Free
+              </button>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Main Content */}
